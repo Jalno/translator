@@ -1,0 +1,17 @@
+{
+    "name": "jalno/translator",
+    "description": "Handle multi languages database titles and contents",
+    "autoload": {
+        "psr-4": {
+            "Jalno\\Translator\\": "src"
+        }
+    },
+    "require": {
+        "jalno/lumen": "^1.0.0"
+    },
+    "extra": {
+        "jalno": {
+            "package": "Jalno\\Translator\\Package"
+        }
+    }
+}
