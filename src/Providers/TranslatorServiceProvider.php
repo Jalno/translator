@@ -5,20 +5,8 @@ use Illuminate\Support\ServiceProvider;
 
 class TranslatorServiceProvider extends ServiceProvider
 {
-	/**
-	 * Register any application services.
-	 *
-	 * @return void
-	 */
-	public function register()
+	public function boot()
 	{
-		if ($this->app->runningInConsole()) {
-			$this->registerMigrations();
-		}
-	}
-
-	public function registerMigrations()
-	{
-		$this->loadMigrationsFrom(package()->getMigrationPath());
+		$this->loadMigrationsFrom(__DIR__ . "/../../database/migrations");
 	}
 }

@@ -7,11 +7,14 @@
         }
     },
     "require": {
-        "jalno/lumen": "^1.0.0"
+        "illuminate/database": "^8.0",
+        "illuminate/support": "^8.0"
     },
     "extra": {
-        "jalno": {
-            "package": "Jalno\\Translator\\Package"
+        "laravel": {
+            "providers": [
+                "Jalno\\Translator\\Providers\\TranslatorServiceProvider"
+            ]
         }
     }
 }

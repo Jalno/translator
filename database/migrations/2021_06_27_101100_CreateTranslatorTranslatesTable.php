@@ -1,18 +1,12 @@
 <?php
-namespace Jalno\Translator\Database\Migrations;
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class M_20210627101100_TranslatorTranslates extends Migration
+class CreateTranslatorTranslatesTable extends Migration
 {
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
+	public function up(): void
 	{
 		Schema::create('translator_translates', function (Blueprint $table) {
 			$table->id();
@@ -24,12 +18,7 @@ class M_20210627101100_TranslatorTranslates extends Migration
 		});
 	}
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
+	public function down(): void
 	{
 		Schema::dropIfExists('translator_translates');
 	}
